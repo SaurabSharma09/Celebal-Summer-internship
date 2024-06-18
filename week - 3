@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div Element</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .styled-box {
+            background-color: #e0f7fa;
+            border: 2px solid #00796b;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .styled-box:hover {
+            background-color: #b2ebf2;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-box">
+        <p>This is a styled div element. Hover over this box to see the effect!</p>
+    </div>
+</body>
+</html>
