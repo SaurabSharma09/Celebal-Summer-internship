@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task Solutions</title>
+</head>
+<body>
+    <h1>Check the console for results of various tasks</h1>
+    <script>
+        // Task 1: Join All Elements of an Array into a String
+        var myColor = ["Red", "Green", "White", "Black"];
+        console.log(myColor.join(",")); // Expected Output: "Red,Green,White,Black"
+        console.log(myColor.join("+")); // Expected Output: "Red+Green+White+Black"
+
+        // Task 2: Find Most Frequent Element in an Array
+        var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        function mostFrequent(arr) {
+            var frequency = {};
+            var maxCount = 0;
+            var mostFrequentItem;
+            arr.forEach(function(item) {
+                frequency[item] = (frequency[item] || 0) + 1;
+                if (frequency[item] > maxCount) {
+                    maxCount = frequency[item];
+                    mostFrequentItem = item;
+                }
+            });
+            return mostFrequentItem + " ( " + maxCount + " times )";
+        }
+        console.log(mostFrequent(arr1)); // Expected Output: "a ( 5 times )"
+
+        // Task 3: Truncate a String
+        function truncateString(str, num) {
+            return str.slice(0, num);
+        }
+        console.log(truncateString("Robin Singh", 4)); // Expected Output: "Robi"
+
+        // Task 4: Capitalize Words in a String
+        function capitalizeWords(str) {
+            return str.split(' ').map(function(word) {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }).join(' ');
+        }
+        console.log(capitalizeWords('js string exercises')); // Expected Output: "Js String Exercises"
+
+        // Task 5: Filter Array Elements Between Two Values
+        function arrBetween(a, b, arr) {
+            return arr.filter(function(item) {
+                return item >= a && item <= b;
+            });
+        }
+        console.log(arrBetween(3, 8, [1, 5, 95, 0, 4, 7])); // Expected Output: [5, 4, 7]
+        console.log(arrBetween(1, 10, [1, 10, 25, 8, 11, 6])); // Expected Output: [8, 6]
+        console.log(arrBetween(7, 32, [1, 2, 3, 78])); // Expected Output: []
+
+        // Task 6: Find Index of a Value in an Array
+        function findIndex(arr, val) {
+            return arr.indexOf(val);
+        }
+        console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")); // Expected Output: 2
+        console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")); // Expected Output: 1
+        console.log(findIndex(["a", "g", "y", "d"], "d")); // Expected Output: 3
+        console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple")); // Expected Output: 0
+    </script>
+</body>
+</html>
