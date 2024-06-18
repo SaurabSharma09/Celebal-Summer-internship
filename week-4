@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First N Elements of an Array</title>
+    <script>
+        function first(array, n) {
+            if (n === undefined) {
+                return array[0];
+            }
+            if (n <= 0) {
+                return [];
+            }
+            return array.slice(0, n);
+        }
+
+        // Test Data
+        console.log(first([7, 9, 0, -2])); // Expected output: 7
+        console.log(first([], 3)); // Expected output: []
+        console.log(first([7, 9, 0, -2], 3)); // Expected output: [7, 9, 0]
+        console.log(first([7, 9, 0, -2], 6)); // Expected output: [7, 9, 0, -2]
+        console.log(first([7, 9, 0, -2], -3)); // Expected output: []
+    </script>
+</head>
+<body>
+    <h1>Check the console for test results.</h1>
+</body>
+</html>
